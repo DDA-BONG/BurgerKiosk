@@ -43,11 +43,11 @@
             grpOption = new GroupBox();
             grpMenu = new GroupBox();
             grpOrder = new GroupBox();
+            lblError = new Label();
             btnInit = new Button();
             btnOrder = new Button();
             lblTotalCost = new Label();
             lstOrder = new ListBox();
-            lblError = new Label();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox3).BeginInit();
@@ -149,7 +149,7 @@
             chkPotato.Location = new Point(16, 23);
             chkPotato.Name = "chkPotato";
             chkPotato.Size = new Size(114, 32);
-            chkPotato.TabIndex = 7;
+            chkPotato.TabIndex = 0;
             chkPotato.Text = "감자튀김";
             chkPotato.UseVisualStyleBackColor = false;
             // 
@@ -162,7 +162,7 @@
             chkCheese.Location = new Point(16, 130);
             chkCheese.Name = "chkCheese";
             chkCheese.Size = new Size(121, 32);
-            chkCheese.TabIndex = 8;
+            chkCheese.TabIndex = 2;
             chkCheese.Text = "치즈 추가";
             chkCheese.UseVisualStyleBackColor = false;
             // 
@@ -175,7 +175,7 @@
             chkSauce.Location = new Point(16, 192);
             chkSauce.Name = "chkSauce";
             chkSauce.Size = new Size(121, 32);
-            chkSauce.TabIndex = 9;
+            chkSauce.TabIndex = 3;
             chkSauce.Text = "소스 추가";
             chkSauce.UseVisualStyleBackColor = false;
             // 
@@ -188,7 +188,7 @@
             chkCola.Location = new Point(16, 74);
             chkCola.Name = "chkCola";
             chkCola.Size = new Size(74, 32);
-            chkCola.TabIndex = 10;
+            chkCola.TabIndex = 1;
             chkCola.Text = "콜라";
             chkCola.UseVisualStyleBackColor = false;
             // 
@@ -203,7 +203,7 @@
             grpOption.Location = new Point(402, 140);
             grpOption.Name = "grpOption";
             grpOption.Size = new Size(143, 241);
-            grpOption.TabIndex = 11;
+            grpOption.TabIndex = 2;
             grpOption.TabStop = false;
             grpOption.Text = "추가 옵션";
             grpOption.Enter += groupBox1_Enter;
@@ -222,7 +222,7 @@
             grpMenu.Location = new Point(12, 94);
             grpMenu.Name = "grpMenu";
             grpMenu.Size = new Size(343, 396);
-            grpMenu.TabIndex = 12;
+            grpMenu.TabIndex = 1;
             grpMenu.TabStop = false;
             grpMenu.Text = "메뉴 선택";
             // 
@@ -238,10 +238,19 @@
             grpOrder.Location = new Point(589, 78);
             grpOrder.Name = "grpOrder";
             grpOrder.Size = new Size(326, 412);
-            grpOrder.TabIndex = 13;
+            grpOrder.TabIndex = 0;
             grpOrder.TabStop = false;
             grpOrder.Text = "주문 내역";
             grpOrder.Enter += groupBox3_Enter;
+            // 
+            // lblError
+            // 
+            lblError.AutoSize = true;
+            lblError.ForeColor = Color.Red;
+            lblError.Location = new Point(17, 287);
+            lblError.Name = "lblError";
+            lblError.Size = new Size(0, 28);
+            lblError.TabIndex = 0;
             // 
             // btnInit
             // 
@@ -250,7 +259,7 @@
             btnInit.Location = new Point(178, 336);
             btnInit.Name = "btnInit";
             btnInit.Size = new Size(117, 56);
-            btnInit.TabIndex = 3;
+            btnInit.TabIndex = 0;
             btnInit.Text = "초기화";
             btnInit.UseVisualStyleBackColor = false;
             btnInit.Click += btnInit_Click;
@@ -262,7 +271,7 @@
             btnOrder.Location = new Point(17, 336);
             btnOrder.Name = "btnOrder";
             btnOrder.Size = new Size(117, 56);
-            btnOrder.TabIndex = 2;
+            btnOrder.TabIndex = 0;
             btnOrder.Text = "주문하기";
             btnOrder.UseVisualStyleBackColor = false;
             btnOrder.Click += btnOrder_Click;
@@ -275,7 +284,7 @@
             lblTotalCost.Location = new Point(6, 236);
             lblTotalCost.Name = "lblTotalCost";
             lblTotalCost.Size = new Size(218, 46);
-            lblTotalCost.TabIndex = 1;
+            lblTotalCost.TabIndex = 0;
             lblTotalCost.Text = "총 금액 : 0원";
             lblTotalCost.Click += lblTotalCost_Click;
             // 
@@ -287,17 +296,9 @@
             lstOrder.Size = new Size(314, 200);
             lstOrder.TabIndex = 0;
             // 
-            // lblError
-            // 
-            lblError.AutoSize = true;
-            lblError.ForeColor = Color.Red;
-            lblError.Location = new Point(17, 287);
-            lblError.Name = "lblError";
-            lblError.Size = new Size(0, 28);
-            lblError.TabIndex = 4;
-            // 
             // Form1
             // 
+            AcceptButton = btnOrder;
             AutoScaleDimensions = new SizeF(9F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(255, 128, 0);

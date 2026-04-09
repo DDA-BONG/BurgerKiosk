@@ -84,7 +84,7 @@ namespace BurgerKiosk
             chkSauce.Checked = false;
             lstOrder.Items.Clear();
             totalCost = 0;
-            lblTotalCost.ForeColor=Color.Blue;
+            lblTotalCost.ForeColor = Color.Blue;
             lblTotalCost.Text = "총 금액 : 0원";
         }
 
@@ -92,5 +92,7 @@ namespace BurgerKiosk
         {
 
         }
+
+       
     }
 }
