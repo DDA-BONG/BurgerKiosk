@@ -68,7 +68,7 @@ namespace BurgerKiosk
             else
             {
                 lblTotalCost.ForeColor = Color.Blue;
-                lblTotalCost.Text = "총 금액 : " + totalCost.ToString() + "원";
+                lblTotalCost.Text = "총 금액 : " + totalCost.ToString("N0") + "원";
             }
         }
 
