@@ -60,7 +60,16 @@ namespace BurgerKiosk
                 totalCost += 500;
                 lstOrder.Items.Add("소스 500원");
             }
-            lblTotalCost.Text = "총 금액 : "+totalCost.ToString()+"원";
+            if (totalCost == 0)
+            {
+                lblTotalCost.ForeColor = Color.Red;
+                lblTotalCost.Text = "메뉴를 선택하십시오";
+            }
+            else
+            {
+                lblTotalCost.ForeColor = Color.Blue;
+                lblTotalCost.Text = "총 금액 : " + totalCost.ToString() + "원";
+            }
         }
 
 
@@ -74,6 +83,8 @@ namespace BurgerKiosk
             chkPotato.Checked = false;
             chkSauce.Checked = false;
             lstOrder.Items.Clear();
+            totalCost = 0;
+            lblTotalCost.ForeColor=Color.Blue;
             lblTotalCost.Text = "총 금액 : 0원";
         }
 

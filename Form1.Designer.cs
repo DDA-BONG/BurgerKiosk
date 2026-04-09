@@ -47,6 +47,7 @@
             btnOrder = new Button();
             lblTotalCost = new Label();
             lstOrder = new ListBox();
+            lblError = new Label();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox3).BeginInit();
@@ -227,6 +228,7 @@
             // 
             // grpOrder
             // 
+            grpOrder.Controls.Add(lblError);
             grpOrder.Controls.Add(btnInit);
             grpOrder.Controls.Add(btnOrder);
             grpOrder.Controls.Add(lblTotalCost);
@@ -243,24 +245,26 @@
             // 
             // btnInit
             // 
-            btnInit.ForeColor = Color.Red;
+            btnInit.BackColor = Color.Red;
+            btnInit.ForeColor = Color.Black;
             btnInit.Location = new Point(178, 336);
             btnInit.Name = "btnInit";
             btnInit.Size = new Size(117, 56);
             btnInit.TabIndex = 3;
             btnInit.Text = "초기화";
-            btnInit.UseVisualStyleBackColor = true;
+            btnInit.UseVisualStyleBackColor = false;
             btnInit.Click += btnInit_Click;
             // 
             // btnOrder
             // 
-            btnOrder.ForeColor = Color.Lime;
+            btnOrder.BackColor = Color.LimeGreen;
+            btnOrder.ForeColor = Color.White;
             btnOrder.Location = new Point(17, 336);
             btnOrder.Name = "btnOrder";
             btnOrder.Size = new Size(117, 56);
             btnOrder.TabIndex = 2;
             btnOrder.Text = "주문하기";
-            btnOrder.UseVisualStyleBackColor = true;
+            btnOrder.UseVisualStyleBackColor = false;
             btnOrder.Click += btnOrder_Click;
             // 
             // lblTotalCost
@@ -282,6 +286,15 @@
             lstOrder.Name = "lstOrder";
             lstOrder.Size = new Size(314, 200);
             lstOrder.TabIndex = 0;
+            // 
+            // lblError
+            // 
+            lblError.AutoSize = true;
+            lblError.ForeColor = Color.Red;
+            lblError.Location = new Point(17, 287);
+            lblError.Name = "lblError";
+            lblError.Size = new Size(0, 28);
+            lblError.TabIndex = 4;
             // 
             // Form1
             // 
@@ -329,5 +342,6 @@
         private Label lblTotalCost;
         private ListBox lstOrder;
         private Button btnInit;
+        private Label lblError;
     }
 }
